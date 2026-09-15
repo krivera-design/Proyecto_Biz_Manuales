@@ -1,0 +1,11 @@
+/* ============================================================
+   Plataform / Mesfix — Design System
+   Global entry point. Consumers link THIS file only.
+   Keep this as an @import manifest — no rules inline.
+   ============================================================ */
+
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/base.css";

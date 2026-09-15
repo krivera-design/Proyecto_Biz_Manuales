@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "creador-de-manuales",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["serve.py", "4173"],
+      "port": 4173,
+      "autoPort": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# La app es estática: no hay paso de compilación, se publica tal cual.
+# El único código de servidor es la función de sugerencias.
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# El servidor local (serve.py) no se despliega: Netlify no ejecuta Python.
+# Su endpoint /api/suggest lo cubre netlify/functions/suggest.mjs, que declara
+# esa misma ruta.

@@ -1,0 +1,55 @@
+/* ============================================================
+   Plataform / Mesfix — Typography tokens
+   "Fácil, tenemos un solo tipo de letra y dos pesos visuales:
+    Mr Eaves XL Book & Mr Eaves XL Bold."  — Brand manual
+   ------------------------------------------------------------
+   Type scale mirrors the Foundations frame (_Tipografía):
+   Display máximo XL 40 · L 24 · M 20 · S 18 · XS 16 · XXS 14 · 12
+   ============================================================ */
+
+:root {
+  /* Families */
+  --font-brand: "Mr Eaves XL Modern", "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-brand);
+
+  /* Weights (the two visual weights + extremes) */
+  --weight-light: 300;
+  --weight-book: 400;   /* body / "Book" */
+  --weight-reg: 500;    /* slightly stronger regular */
+  --weight-bold: 700;   /* display / emphasis "Bold" */
+  --weight-heavy: 800;
+
+  /* ---- Type scale (px) ------------------------------------ */
+  --text-display-xl: 40px;   /* Display máximo XL */
+  --text-display-l: 24px;    /* Display L */
+  --text-display-m: 20px;    /* Display M */
+  --text-display-s: 18px;    /* Display S */
+  --text-xs: 16px;           /* Display XS — base UI */
+  --text-xxs: 14px;          /* small UI / dense */
+  --text-micro: 12px;        /* legal / chips */
+
+  /* Marketing headline sizes (covers, hero) */
+  --text-hero: 96px;
+  --text-h1: 64px;
+  --text-h2: 48px;
+
+  /* ---- Line heights --------------------------------------- */
+  --leading-tight: 1;        /* brand default — display sits at 100% */
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;     /* body copy */
+  --leading-relaxed: 1.6;
+
+  /* ---- Tracking ------------------------------------------- */
+  --tracking-tight: -0.02em; /* large display */
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;   /* uppercase nav / labels */
+
+  /* ---- Semantic roles ------------------------------------- */
+  --font-display: var(--weight-bold) var(--text-display-xl) / var(--leading-tight) var(--font-brand);
+  --font-title:   var(--weight-bold) var(--text-display-l)  / var(--leading-snug) var(--font-brand);
+  --font-subtitle:var(--weight-book) var(--text-display-m)  / var(--leading-snug) var(--font-brand);
+  --font-body:    var(--weight-book) var(--text-xs)         / var(--leading-normal) var(--font-brand);
+  --font-body-sm: var(--weight-book) var(--text-xxs)        / var(--leading-normal) var(--font-brand);
+  --font-button:  var(--weight-bold) var(--text-xs)         / var(--leading-tight) var(--font-brand);
+  --font-label:   var(--weight-bold) var(--text-xxs)        / var(--leading-snug) var(--font-brand);
+}

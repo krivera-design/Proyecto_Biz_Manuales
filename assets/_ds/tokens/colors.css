@@ -1,0 +1,91 @@
+/* ============================================================
+   Plataform / Mesfix — Color tokens
+   Source of truth: "01 PLATAFORM MANUAL V3" + UI Kit (Mesfix) .fig
+   ------------------------------------------------------------
+   Violeta is the corporate color (PANTONE 266C). Mesfix endorses
+   Plataform with Aqua/Azul (PANTONE 332C / 2728C). The secondary
+   palette adds brightness — used with moderation, never stealing
+   focus from Violeta or White.
+   ============================================================ */
+
+:root {
+  /* ---- Brand / corporate ---------------------------------- */
+  --color-violeta: #7B00CD;          /* Violeta Plataform — corporate, PANTONE 266C */
+  --color-violeta-oscuro: #410099;   /* Violeta oscuro — deep press/accents */
+  --color-violeta-mesfix: #6A00B3;   /* mid violet for endorsement lockups */
+  --color-azul-mesfix: #2B00FF;      /* Azul Mesfix — vivid digital, PANTONE 2728C */
+
+  /* ---- Aqua / contrast (Mesfix heritage) ------------------ */
+  --color-aqua: #39C2D4;             /* Aqua Mesfix — primary action / contrast */
+  --color-cian: #87E1D1;             /* Cian Plataform — PANTONE 332C */
+
+  /* ---- Secondary palette (use with moderation) ------------ */
+  --color-verde: #00AC69;            /* Verde — success deep, PANTONE 3405C */
+  --color-verde-encendido: #70D44B;  /* Verde encendido — success bright, PANTONE 7488C */
+  --color-amarillo: #FED925;         /* Amarillo — PANTONE 115C */
+  --color-naranja: #FF9E18;          /* Naranja — warning, PANTONE 1375C */
+  --color-salmon: #FF7276;           /* Salmón — PANTONE 805C */
+  --color-rojo: #E81F76;             /* Rojo — PANTONE 213C */
+  --color-rojo-error: #D31A3C;       /* error toast red (from UI kit) */
+
+  /* ---- Neutrals ------------------------------------------- */
+  --color-blanco: #FFFFFF;           /* Blanco Plataform */
+  --color-texto: #3C3C3C;            /* Gris para textos — PANTONE Black7, body copy */
+  --color-gris: #9EA1A2;             /* Gris Plataform — PANTONE 442C, muted text/dividers */
+  --color-gris-medio: #727272;       /* supporting text */
+  --color-gris-input: #B3B3B3;       /* input lines / disabled */
+  --color-gris-claro: #F3F3F3;       /* light surface fill */
+  --color-gris-deshabilitado: #9EA1A2; /* disabled button fill */
+
+  /* Slate set (used in covers / dark surfaces) */
+  --color-slate-900: #0F1729;        /* deep navy surface */
+  --color-slate-800: #0A2540;        /* navy text on light */
+  --color-slate-700: #124370;
+
+  /* Gray ramp (UI structure, borders, shadows) */
+  --color-ink: #101828;              /* near-black headings */
+  --color-ink-soft: #475467;         /* secondary text */
+  --color-line: #D0D5DD;             /* hairline borders */
+
+  /* ============================================================
+     Semantic aliases — prefer these in components
+     ============================================================ */
+
+  /* Text */
+  --text-strong: var(--color-ink);          /* headings on white */
+  --text-body: var(--color-texto);          /* default body copy */
+  --text-muted: var(--color-gris-medio);    /* supporting / captions */
+  --text-subtle: var(--color-gris);         /* placeholder / disabled label */
+  --text-on-brand: var(--color-blanco);     /* text over violeta/aqua */
+  --text-link: var(--color-violeta);
+
+  /* Surfaces */
+  --surface-page: var(--color-blanco);
+  --surface-card: var(--color-blanco);
+  --surface-muted: var(--color-gris-claro);
+  --surface-brand: var(--color-violeta);
+  --surface-brand-deep: var(--color-violeta-oscuro);
+  --surface-dark: var(--color-slate-900);
+
+  /* Primary action = Aqua (default in product), Violeta = brand-primary */
+  --action-primary: var(--color-aqua);
+  --action-primary-hover: #2BAEC0;
+  --action-primary-press: #1F95A6;
+  --action-brand: var(--color-violeta);
+  --action-brand-hover: #6A00B3;
+  --action-brand-press: var(--color-violeta-oscuro);
+  --action-disabled: var(--color-gris-deshabilitado);
+
+  /* Lines / borders / focus */
+  --border-default: var(--color-line);
+  --border-input: var(--color-gris-input);
+  --border-strong: var(--color-texto);
+  --focus-ring: color-mix(in srgb, var(--color-violeta) 40%, transparent);
+
+  /* Status / feedback */
+  --status-success: var(--color-verde-encendido);
+  --status-success-deep: var(--color-verde);
+  --status-error: var(--color-rojo-error);
+  --status-warning: var(--color-naranja);
+  --status-info: var(--color-aqua);
+}

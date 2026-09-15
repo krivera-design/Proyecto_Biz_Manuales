@@ -1,0 +1,67 @@
+/* ============================================================
+   Plataform / Mesfix — Spacing, radii, shadows, layout
+   Derived from the Foundations frames (Cards + sombra, Modals,
+   Buttons, Inputs). Modular spacing on a 4px base.
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (4px base) --------------------------- */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ---- Radii ---------------------------------------------- */
+  --radius-xs: 4px;     /* toasts / chips */
+  --radius-sm: 8px;     /* cards, modals */
+  --radius-md: 12px;    /* swatches / media tiles */
+  --radius-lg: 16px;
+  --radius-pill: 999px; /* buttons are fully pill-shaped */
+
+  /* ---- Card sizes (named in Foundations "_Cards + sombra") - */
+  --card-xs: 220px;   /* Mercado / Inversiones / Perfil tiles */
+  --card-sm: 530px;   /* Mercado / Perfil panels */
+  --card-ml: 1280px;  /* landing-page base */
+
+  /* ---- Modal sizes ("_Pop up/Modals") --------------------- */
+  --modal-sm: 390px;
+  --modal-md: 560px;  /* estándar */
+  --modal-xl: 920px;  /* contracts */
+
+  /* ---- Elevation / shadows -------------------------------- */
+  /* Swatch / small tile — inset hairline + soft drop */
+  --shadow-tile:
+    inset 0 0 0 1px rgba(0,0,0,0.10),
+    0 12px 16px -4px rgba(16,24,40,0.10),
+    0 4px 6px -2px rgba(16,24,40,0.05);
+  /* Card — gentle ambient lift */
+  --shadow-card: 0 8px 24px rgba(16,24,40,0.08);
+  --shadow-card-hover: 0 12px 32px rgba(16,24,40,0.12);
+  /* Modal — pronounced, soft, gray-tinted (from Foundations) */
+  --shadow-modal: 2px 10px 50px 12px rgba(60,60,60,0.30);
+  /* Toast — tight punchy drop */
+  --shadow-toast: 0 2px 12px 2px rgba(0,0,0,0.15);
+  /* Header — barely-there separation */
+  --shadow-header: 0 2px 8px rgba(16,24,40,0.06);
+
+  /* ---- Layout -------------------------------------------- */
+  --container-max: 1280px;
+  --header-height: 80px;
+  --page-gutter: 80px;
+  --field-gap: 16px;       /* margin entre inputs */
+
+  /* ---- Motion -------------------------------------------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 320ms; /* @kind other */
+}
