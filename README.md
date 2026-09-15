@@ -1,4 +1,8 @@
-# Creador de Manuales
+# Proyecto_Biz_Manuales
+
+Proyecto de creación de manuales para Biz Nation.
+
+---
 
 Implementation of `ProductLab.dc.html` from the Claude Design project
 *Creador de manuales*, built against the **Plataform / Mesfix** design system.
