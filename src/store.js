@@ -231,13 +231,19 @@ export function createStore(props, onChange) {
     },
 
     // Fresh manual — never a continuation of whatever was last edited.
+    // Se limpia también el área y la plantilla: si no, un manual nuevo hereda
+    // los del último que se editó y queda archivado en el área equivocada.
     newManual() {
       state.shots.forEach(releaseUnused);
       setState({
         screen: "wizard", step: 1, preview: null,
         manualId: null, manualTitle: "", draftSaved: false,
+        manualArea: "Comercial", tplId: "1", tplFamily: "Todas",
         shots: props.seed ? SEED.map((x) => ({ ...x })) : [],
-        active: 0, ai: "idle", titleAi: "idle", fIdx: 0,
+        active: 0, fIdx: 0,
+        ai: "idle", aiSuggestion: null, aiError: null,
+        titleAi: "idle", titleAiValue: "", titleAiError: null,
+        driveFile: null, driveError: null, pdfError: null,
       });
     },
 
@@ -252,7 +258,10 @@ export function createStore(props, onChange) {
         manualArea: m.area,
         tplId: m.tpl,
         shots: m.pages.map((p) => ({ ...p })),
-        active: 0, ai: "idle", titleAi: "idle", fIdx: 0, draftSaved: false,
+        active: 0, fIdx: 0, draftSaved: false,
+        ai: "idle", aiSuggestion: null, aiError: null,
+        titleAi: "idle", titleAiValue: "", titleAiError: null,
+        driveFile: null, driveError: null, pdfError: null,
       });
     },
 
